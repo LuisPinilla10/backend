@@ -1,7 +1,7 @@
 
 from fastapi import Depends, HTTPException, status, Response
 from fastapi.security import OAuth2PasswordBearer
-from app.utils.token import verify_token, should_renew_token, renew_token  # ← NUEVO: importar funciones de renovación
+from app.utils.token import verify_token
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/token") # Asegúrate que la ruta sea la correcta
 
